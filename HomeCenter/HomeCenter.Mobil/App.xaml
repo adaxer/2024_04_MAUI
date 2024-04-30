@@ -1,0 +1,22 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HomeCenter.Mobil"
+             x:Class="HomeCenter.Mobil.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <LinearGradientBrush x:Key="niceGradient" StartPoint="0.3,0" EndPoint="0.9,0" >
+                <GradientStop Color="Yellow" Offset="0"/>
+                <GradientStop Color="Gray" Offset="0.5"/>
+                <GradientStop Color="LightGreen" Offset="1"/>
+            </LinearGradientBrush>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

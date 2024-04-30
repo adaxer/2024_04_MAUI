@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HomeCenter.Mobil.AppShell"
+    xmlns:views="clr-namespace:HomeCenter.Mobil.Views"
+    Title="HomeCenter.Mobil" >
+
+    <ShellContent Shell.NavBarIsVisible="True"
+        Title="Welcome"
+        ContentTemplate="{DataTemplate views:WelcomePage}"
+        Route="WelcomePage" />
+
+    <ShellContent Shell.NavBarIsVisible="True"
+        Title="Holidays"
+        ContentTemplate="{DataTemplate views:HolidaysPage}"
+        Route="HolidaysPage" />
+
+    <ShellContent Shell.NavBarIsVisible="True"
+        Title="Weather"
+        ContentTemplate="{DataTemplate views:WeatherDataPage}"
+        Route="WeatherDataPage" />
+
+    <ShellContent Shell.NavBarIsVisible="True"
+        Title="Bell"
+        ContentTemplate="{DataTemplate views:BellNotificationPage}"
+        Route="BellNotificationPage" />
+
+</Shell>
