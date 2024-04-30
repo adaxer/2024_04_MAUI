@@ -2,13 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HomeCenter.Mobil.Views.HolidaysPage"
+             xmlns:data="clr-namespace:HomeCenter.Common.Models;assembly=HomeCenter.Common"
              Title="{Binding Title}">
     <VerticalStackLayout>
         <Label 
-            Text="Land und Datum auswählen"
+            Text="Land und Jahr auswählen"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        
-        
+
+        <Picker ItemsSource="{Binding States}" ItemDisplayBinding="{Binding Value}" SelectedItem="{Binding SelectedState, Mode=TwoWay}"/>
+
+        <Entry Placeholder="Jahr" Text="{Binding SelectedYear, Mode=TwoWay}" />
+
+        <Button Text="Daten abrufen" Command="{Binding GetDataCommand}" />
+
+        <CollectionView ItemsSource="{Binding Holidays}" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="data:Holiday">
+                    <HorizontalStackLayout >
+                        <Label Text="{Binding Name}" />
+                        <Label Text="{Binding Date}" />
+                        <Label Text="{Binding Description}" />
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>
