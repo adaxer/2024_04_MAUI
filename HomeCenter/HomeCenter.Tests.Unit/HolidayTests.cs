@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using HomeCenter.Mobil.Models;
+using HomeCenter.Common.Models;
 
 namespace HomeCenter.Tests.Unit;
 
